@@ -6,14 +6,14 @@ namespace Commander.Controllers
 {
 	[Route("api/commands")] //or [Route("api/[controller]")]
 	[ApiController]
-	public class CommandsController : ControllerBase //ControllerBase = without view support
+	public class CommandsController(ICommanderRepo repository) : ControllerBase //ControllerBase = without view support
 	{
 		//private readonly MockCommanderRepo _repository = new MockCommanderRepo();
-		private readonly ICommanderRepo _repository;
+		private readonly ICommanderRepo _repository = repository;
 
-		public CommandsController(ICommanderRepo repository) {
-			_repository = repository;
-		}
+		//public CommandsController(ICommanderRepo repository) {
+		//	_repository = repository;
+		//}
 
 		//GET api/commands
 		[HttpGet]

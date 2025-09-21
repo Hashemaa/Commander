@@ -8,8 +8,8 @@ namespace Commander.Data
 		{
 			var commands = new List<Command> {
 				new Command {Id = 0, HowTo = "The first mock HowTo", Line = "The first mock Line", Platform = "The first mcok Platform"},
-				new Command {Id = 0, HowTo = "The second mock HowTo", Line = "The second mock Line", Platform = "The second mcok Platform"},
-				new Command {Id = 0, HowTo = "The third mock HowTo", Line = "The third mock Line", Platform = "The third mcok Platform"},
+				new Command {Id = 1, HowTo = "The second mock HowTo", Line = "The second mock Line", Platform = "The second mcok Platform"},
+				new Command {Id = 2, HowTo = "The third mock HowTo", Line = "The third mock Line", Platform = "The third mcok Platform"},
 			};
 
 			return commands;
