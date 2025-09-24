@@ -4,7 +4,7 @@ namespace Commander.Data
 {
 	public class MockCommanderRepo : ICommanderRepo
 	{
-		public IEnumerable<Command> GetAllCommands()
+		public IEnumerable<Command?> GetAllCommands()
 		{
 			var commands = new List<Command> {
 				new Command {Id = 0, HowTo = "The first mock HowTo", Line = "The first mock Line", Platform = "The first mcok Platform"},
@@ -15,7 +15,7 @@ namespace Commander.Data
 			return commands;
 		}
 
-		public Command GetCommandById(int id)
+		public Command? GetCommandById(int id)
 		{
 			return new Command { Id = 0, HowTo = "Mock by id HowTo", Line = "Mock by id Line", Platform = "Mock by id Platform"};
 		}
